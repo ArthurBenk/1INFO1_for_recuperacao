@@ -6,11 +6,26 @@
     */
 
     //Entrada
+    let quantas=Number(prompt("quantas notas o aluno obteve neste trimetre?"))
+    notas = []
 
+    for (let numero =1;numero<=quantas;numero++) {
+        let nota = prompt("informe a nota do aluno")
+        notas.push(nota)
+    }
+    
+    const maiorNota = notas[0];
+    const menorNota = notas[notas.length - 1];
 
     //Processamento
-
-
+    let soma = 0;
+    for (const notaLegal of notas) {
+        soma = soma + notaLegal;
+    }
+    const media = soma / (notas.length);
+    document.write(`media:${media.toFixed(1)} <br>`)
+    document.write(`maior nota:${maiorNota} <br>`)
+    document.write(`menor nota:${menorNota}`)
     //Saída
 
 

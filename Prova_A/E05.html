@@ -13,13 +13,33 @@
     */
 
     //Entrada
-
-
+    let numero = [Number(prompt("quantas eleitores votarão?"))]
+    let candidato1 = []
+    let candidato2 = []
+    let candidato3 = []
+    let candidato4 = []
+    let nulo = []
+    let branco = []
     //Processamento
+    for (const eleitores of numero) {
+    let voto = Number(prompt("qual será o seu voto?"))
+    if (voto==1) {candidato1.push(voto)} 
+    else if (voto==2) {candidato2.push(voto)}
+    else if (voto==3) {candidato3.push(voto)}
+    else if (voto==4) {candidato4.push(voto)}
+    else if (voto==5) {nulo.push(voto)}
+    else if (voto==6) {branco.push(voto)}
+    }
+
 
 
     //Saída
-
+    document.write(`-candidato 1 obteve ${candidato1.length} votos <br>`)
+    document.write(`-candidato 2 obteve ${candidato2.length} votos <br>`)
+    document.write(`-candidato 3 obteve ${candidato3.length} votos <br>`)
+    document.write(`-candidato 4 obteve ${candidato4.length} votos <br>`)
+    document.write(`-total de votos nulos é de ${nulo.length}<br>`)
+    document.write(`-total de votos em branco é de ${branco.length}`)
     /*
     Desafio :)
     */

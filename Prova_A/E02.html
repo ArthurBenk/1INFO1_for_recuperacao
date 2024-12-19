@@ -8,11 +8,18 @@
     */
 
     //Entrada
-
+    let professores = ["Fábio", "Daniel", "Elder", "Heder", "Renilse", "Orlando"];
+    let tec=[]
+    let ger=[]
 
     //Processamento
-
-
+    for (const nome of professores) {
+        let pergunta=prompt(`o professor ${nome} é da area tecnica?`).toLowerCase()
+        if (pergunta=="sim") {tec.push(nome)} 
+        else if (pergunta=="não"||pergunta=="nao") {ger.push(nome)}
+    }
+    document.write(`Professores da área técnica: ${tec}<br>`)
+    document.write(`Professores da área geral: ${ger}<br>`)
     //Saída
 
     /*
